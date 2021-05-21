@@ -1,0 +1,207 @@
+/*article
+-------------------------------------------*/
+.bg_thumbnails {
+	width: 100%;
+	height: 225px;
+	min-height: auto;
+	background-size: 130%;
+	background-position: center center;
+	@include mq(md) {
+		height: 400px;
+	}
+
+	>h1 {
+		padding-left: 25px;
+		line-height: 225px;
+		font-family: 'M PLUS 1p'、sans-serif;
+		font-size: 36px;
+		color: #FFF;
+		@include mq(md) {
+			// text-align: left;
+			padding-left: 80px;
+			line-height: 400px; //※縦中央揃え
+			font-size: 60px;
+		}
+	}
+}
+
+.l-article-wrap{
+	margin: 0 20px;
+	color: #3C2A10;
+	@include mq(md) {
+		margin: 0 60px;
+	}
+	@include mq(lg) {
+		margin: 0 100px;
+	}
+
+	>div {
+		>h2 {
+			padding: 30px 0;
+			@include mq(md) {
+				padding: 60px 0;
+			}
+		}
+		>p {
+			padding-bottom: 60px;
+		}
+		>h3, >h4 {
+			padding-bottom: 30px;
+			@include mq(md) {
+				padding-bottom: 60px;
+			}
+		}
+	}
+
+	//引用
+	blockquote {
+		height: 70vh;
+		margin-bottom: 30px;
+		background-color: #F5F5F5;
+		@include mq(md) {
+			height: 45vh;
+			margin-bottom: 60px;
+			padding: 50px auto auto 50px;
+		}
+		@include mq(lg) {
+			height: 35vh;
+		}
+		>p {
+			height: 83%;
+			padding: 30px 20px;
+			overflow:hidden;
+			@include mq(md) {
+				height: 60%;
+				padding: 50px;
+			}
+			@include mq(lg) {
+				height: 56%;
+			}
+		}
+		cite {
+			display: block;
+			margin: 30px 20px;
+			@include mq(md) {
+				margin: 60px 50px;
+			}
+			>a {
+				color: #4A6C9B;
+			}
+		}
+	}
+
+	//メイン画像
+	>div>div>figure>img {
+		width: 100%;
+		object-fit: cover;
+		height: auto;
+	}
+
+	//2カラムエリア
+	.l-article-column {
+		flex-wrap: nowrap;
+		>div {
+			height: 50%;
+			>p {
+				overflow: visible hidden;
+			}
+			>figure {
+				>img {
+					width: 100%;
+					height: auto;
+					object-fit: cover;
+				}
+			}
+		}
+		>div:nth-of-type(1) {
+			>p {
+				margin-right: 15px;
+			}
+		}
+		>div:nth-of-type(2) {
+			>p {
+				margin-left: 15px;
+			}
+		}
+	}
+
+	.article-images-wrap {
+		>div {
+			@include mq(md) {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+			>div {
+				margin-bottom: initial; //デフォルトリセット
+				margin-bottom: 20px;
+				@include mq(md) {
+					width: 49%;
+				}
+				@include mq(lg) {
+					width: 32%;
+				}
+				>figure {
+					>img {
+						object-fit: cover;
+						height: auto;
+					}
+				}
+			}
+		}
+	}
+
+	//リスト
+	.p-list-container {
+		padding: 1rem 3rem 5vh;
+		@include mq(md) {
+			padding: 2.5rem 3rem 4rem;
+		}
+		>div {
+			>ol, >ul {
+			list-style: none;
+			}
+		}
+		.list-indent {
+			text-indent: 3rem;
+		}
+	}
+
+	//コードエリア
+	.p-htmlcode {
+		padding: initial;
+		padding: 50px;
+	}
+
+	//テーブル
+	table>tbody>tr>td {
+			padding: 30px;
+	}
+
+	//ボタン
+	.wp-block-buttons {
+		margin: 50px auto;
+		@include mq(md) {
+			margin-left: 0;
+			margin-right: auto;
+			width: 60%;
+		}
+		@include mq(lg) {
+			width: 40%;
+		}
+		.wp-block-button {
+			>a {
+				line-height: 5rem; //*
+				border-width: 1px;
+				@include mq(md) {
+					width: 65%;
+					line-height: 6.5rem;
+				}
+			}
+		}
+	}
+
+	.bold {
+		padding: 30px 0;
+	}
+}

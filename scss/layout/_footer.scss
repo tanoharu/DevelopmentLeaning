@@ -1,0 +1,38 @@
+/*footer
+-------------------------------------------*/
+.l-footer {
+	width: 100%;
+	height: 150px;
+	text-align: center;
+	padding: 40px 0 35px 0;
+	background-image: url(../images/footer.png);
+	background-size: cover;
+	font-weight: 400;
+	color: #fff;
+
+	h4 {
+		padding-bottom: 30px;
+		font-weight: normal;
+		font-size: 1.2rem;
+		@include mq(md) {
+			padding-bottom: 0; //paddingリセット
+			padding-bottom: 20px;
+			font-size: 1.25rem;
+		}
+		@include mq(lg) {
+			padding: 10px 0;
+			font-size: 18px;
+		}
+	}
+
+	p {
+		padding-bottom: 30px;
+		font-size: 12px;
+		@include mq(md) {
+			font-size: 0.875rem;
+		}
+		@include mq(lg) {
+			font-size: 14px;
+		}
+	}
+}

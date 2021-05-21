@@ -1,0 +1,121 @@
+/*archive
+-------------------------------------------*/
+.l-archive-text {
+	height: 375px;
+	padding: 20px;
+	>h2 {
+		font-weight: bold;
+	}
+	>p {
+		color: #3C2A10;
+		line-height: 21px;
+	}
+}
+.p-article {
+	margin: 0 20px 20px 20px;
+	background-color: #3C2B1C;
+	height: 580px;
+	@include mq(md) {
+		display: flex;
+		height: 355px;
+	}
+	@include mq(lg) {
+		height: 470px;
+	}
+	
+	>img {
+		width: 100%;
+		height: 230px;
+		object-fit: cover;
+		@include mq(md) {
+			width: 50%;
+			height: 100%;
+		}
+	}
+
+	.p-article__text {
+		color: #FFF;
+		height: 355px;
+		padding: 1.5rem;
+		font-family: 'M PLUS 1p'、sans-serif;
+		@include mq(md) {
+			width: 50%;
+			padding: 2rem;
+		}
+		@include mq(lg) {
+			height: 470px;
+			padding: 4rem;
+			font-size: 18px;
+		}
+
+		>p {
+			position: relative;
+			@include mq(lg) {
+				width: 100%;
+				height: 150px;
+			}
+		}
+
+		>ul {
+			list-style: none;
+			height: 50%;
+			position: relative;
+
+			>li:nth-child(1) { //フード紹介
+				padding: 10px 0 20px 0;
+				@include mq(md) {
+					padding-top: 0;
+				}
+			}
+			>li:nth-child(2) { //カロリー
+				padding-bottom: 10px;
+			}
+			>li:nth-child(n+2) { //紹介文を除く項目
+				text-align: right;
+			}
+			>li:nth-child(4) { //価格
+				@include mq(lg) {
+					padding-bottom: 20px;
+				}
+			}
+			>li:nth-child(6) { //お知らせ
+				display: block;
+				position: absolute;
+				right: 0px;
+				top: -50px;
+				padding: 5px 20px;
+				border-radius: 15px;
+				font-size: 12px;
+				background-color: salmon;
+				@include mq(md) {
+					top: -70px;
+				}
+				@include mq(lg) {
+					top: -100px;
+					font-size: 16px;
+				}
+			}
+
+			>p { //「詳しく見る」
+				background-color: #FFF;
+				text-align: center;
+				width: 165px; //*
+				border-radius: 20px;
+				padding: 2rem auto;
+				margin: 0rem auto 0 auto;
+				font-weight: bold;
+				height: 42px; //**
+				
+				>a {
+					display: inline-block;
+					position: relative;
+					width: 165px; //*
+					height: 42px; //**
+					line-height: 42px; //**
+					color: #707070;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

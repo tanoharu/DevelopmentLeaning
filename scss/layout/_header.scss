@@ -1,0 +1,90 @@
+/*header
+-------------------------------------------*/
+.l-header {
+	height: 200px;
+	position: relative;
+	padding: 40px 0 30px 0;
+	text-align: center;
+	vertical-align: middle;
+	background: #FFF7EF;
+	font-family: 'Roboto', sans-serif;
+	@include mq(lg) {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 20px 0 50px;
+	}
+	
+	.menu {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		margin: 1rem 1.25rem 0 0;
+		cursor: pointer;
+		outline: none; //クリック時の枠を消す
+		font-size: 20px;
+		@include mq(md) {
+			font-size: 1.7em;
+		}
+		@include mq(lg) {
+			display: none;
+		}
+	}
+
+	>h1{
+		margin-bottom: 30px;
+		font-size: 36px;
+		@include mq(md) {
+			font-size: 40px;
+		}
+		@include mq(lg) {
+			font-size: 46px;
+		}
+		>a {
+			text-decoration: none;
+			color: #707070;
+		}
+	}
+
+	input {
+		height: 50px;
+		margin-right: 5px;
+		padding-left: 50px;
+		border: solid 1px #707070;
+		border-radius: 10px;
+		@include mq(md) {
+			height: 40px;
+		}
+	}
+
+	.search {
+		width: 50%;
+		padding: 10px 10px 10px 50px; //左余白⇒虫眼鏡サイズ分
+		background-image: url(../images/search-icon.png);
+		background-position: 16px center;
+		background-size: 24px;
+		background-color: white;
+		cursor: pointer;
+		color: #707070;
+		@include mq(md) {
+			width: 40%;
+		}
+		@include mq(lg) {
+			width: 330px;
+		}
+	}
+
+	.submit {
+		width: 16%;
+		padding: 0;
+		background: #F2EDE9;
+		font-weight: bold;
+		@include mq(md) {
+			width: 12%;
+			font-size: 14px;
+		}
+		@include mq(lg) {
+			width: 120px; 
+		}
+	}
+}

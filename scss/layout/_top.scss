@@ -1,0 +1,82 @@
+/*top
+-------------------------------------------*/
+.l-top {
+	width: 100%;
+	height: 280px;
+	background-image: url(../images/top-bg_sm.png); //*
+	background-size: cover;
+	background-position: top 80% right 10%;
+	@include mq(md) {
+		height: 250px;
+		background-image:url(../images/top-bg_md.png); //*
+	}
+	@include mq(lg) {
+		height: 530px;
+	}
+
+	>h2 {
+		padding-left: 5%;
+		line-height: 280px; //縦中央寄せ
+		font-size: 32px;
+		font-weight: bold;
+		color: #FFF;
+		@include mq(md) {
+			line-height: 250px; //縦中央寄せ
+		}
+		@include mq(lg) {
+			line-height: 530px; //縦中央寄せ
+			font-size: 40px;
+		}
+	}
+}
+
+/*top--archive, --archive-search
+---------------------------------------------------------------*/
+.l-top--archive {
+	width: 100%;
+	height: 280px; 
+	background-image: url(../images/three-burgers.png);
+	background-position: left 30% center;
+	background-size: 230%;
+	@include mq(md) {
+		background-size: auto; //初期値
+		background-position: center center;
+	}
+	@include mq(lg) {
+		height: 240px;
+		background-size: cover;
+	}
+	
+	>div{ //マスク
+		position: relative;
+		width: 100%;
+		height: 280px;
+		background: rgba( 0, 0, 0, 0.5);
+		@include mq(lg) {
+			height: 240px;
+		}
+
+		>div{ //Menu:
+			position: absolute;
+			height: 80px;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			padding-left: 37px;
+			@include mq(md) {
+				display: flex;
+				align-items: center;
+			}
+
+			>p {
+				color: #fff;
+				line-height: 21px;
+				letter-spacing: -2px;
+			}
+
+			>h1>span {
+				font-size: 16px;
+			}
+		}
+	}
+}

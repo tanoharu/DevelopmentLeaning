@@ -1,0 +1,88 @@
+/*map
+-------------------------------------------*/
+.p-map {
+	width: 100%; //実寸サイズを指定
+	height: 700px; //実寸サイズを指定
+	overflow: hidden; //枠からはみ出た要素を非表示に
+	position: relative;
+	@include mq(md) {
+		height: 330px;
+	}
+	@include mq(lg) {
+		height: 650px;
+	}
+
+	.map-text {
+		height: 700px;
+		position: absolute;
+		padding: 50px;
+		background: rgba(0,0,0,0.5);
+		color: #fff;
+		z-index: 5;
+		@include mq(md) {
+			padding: 40px;
+		}
+		@include mq(lg) {
+			height: 650px;
+			width : 60%;
+			padding: 90px;
+		}
+		
+		h2 {
+			font-size: 30px;
+			font-weight: normal;
+			@include mq(md) {
+				font-size: 22px;
+			}
+			@include mq(lg) {
+				font-size: 32px;
+			}
+		}
+		>span {
+			display: block;
+			width: 90px;
+			height: 2px;
+			margin: 15px 0;
+			background-color: #fff;
+			@include mq(md) {
+				width: 70px;
+			}
+			@include mq(lg) {
+				width: 50px;
+				margin: 50px 0;
+			}
+		}
+
+		>p {
+			font-size: 14px;
+			line-height: 2rem;
+			@include mq(md) {
+				font-size: 10px;
+				line-height: 1.5rem;
+			}
+			@include mq(lg) {
+				font-size: 14px;
+				line-height: 1.8rem
+			}
+		}
+	}
+
+	.map-mask {
+		height: 650px;
+		width: 100%;
+		position: absolute;
+		z-index: 4;
+		background-color: rgba(0,0,0,0.5);
+	}
+	iframe {
+		//左上表示を消す
+		width: 100%; //実寸よりも大きいサイズを指定
+		height: 1000px; //実寸よりも大きいサイズを指定
+		margin-top: -170px; //ネガティブマージンで要素を上にずらす
+		position: absolute;
+		z-index: 3;
+		@include mq(lg) {
+			height: 3000px; //※
+		}
+	}
+}

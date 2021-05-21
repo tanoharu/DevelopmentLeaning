@@ -1,0 +1,78 @@
+.l-aside-wrap {
+	width: 100%;
+	height: 100%;
+	display: none; //非表示にしておく
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	z-index: 20;
+	background-color: rgba(0,0,0,0.5);
+	@include mq(lg) {
+		display: block !important;
+		position: static;
+		backgsround-color: transparent;
+	}
+
+	.g-menu{
+		height: 100%;
+		width: 400px;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		overflow-y: auto;
+		padding: 100px 0 500px 50px;
+		box-sizing: border-box;
+		z-index: 30;
+		background-color: #F2EDE9;
+		@include mq(lg) {
+			width: auto;
+			position: static;
+			padding: 0; //リセット
+			padding: 50px 0 0 40px;
+		}
+		>.menu {
+			display: none;
+			@include mq(lg) {
+				display: block;
+				padding: 20px 0;
+				font-family: 'Roboto', sans-serif;
+				font-size: 30px;
+				font-weight: bold;
+			}
+		}
+		
+		.menu-list {
+			font-family: 'M PLUS 1p', sans-serif;
+			.menu-gmenu-container {
+				>ul { //カテゴリー
+					margin-top: 60px;
+					list-style: none;
+					font-size: 24px;
+					font-weight: bold;
+
+					>li {
+						>a {
+							text-decoration: none;
+							color: #707070;
+						}
+						>ul { //投稿記事
+							margin: 2.5rem auto 2rem 1rem;
+							list-style:none;
+							font-size: 20px;
+							font-weight: normal;
+							>li{
+								margin-bottom: 1.2rem;
+								>a {
+									text-decoration: none;
+									border-bottom: transparent 1.2rem solid;
+									color: #707070;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

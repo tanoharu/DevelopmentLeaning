@@ -1,0 +1,81 @@
+/*pagination
+-------------------------------------------*/
+.p-pagination {
+	height: 200px;
+	@include mq(md) {
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		margin-bottom: 60px;
+	}
+
+	>p { //「Page */*」
+		display: none; //smサイズでは非表示
+		@include mq(md) {
+			width: 175px;
+			display: inline-block;
+			padding: 5px;
+		}
+	}
+}
+
+.page-numbers {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: relative;
+	visibility: hidden;
+	text-decoration: none;
+	list-style: none;
+		@include mq(md) {
+		width: 35px;
+		height: 35px;
+		margin: 0 7px;
+		justify-content: center;
+		visibility: visible;
+		border: solid 1px #707070;
+		font-weight: bold;
+		color: #707070;
+	}
+}
+
+.navigation>div>ul {
+	@include mq(md) {
+		border: none;
+	}
+}
+
+.navigation>div>ul>li>a>span { //「前へ」「次へ」部分
+	display: block;
+	@include mq(md) {
+		display: none;
+	}
+}
+
+.page-numbers.prev, .page-numbers.next { //「≪」「≫」部分
+	border: none;
+	visibility: visible;
+	font-size: 20px;
+	font-weight: normal;
+	top: 140px;
+	@include mq(md) {
+		position: static;
+	}
+}
+
+.page-numbers.prev{
+	left: -10px;
+}
+
+.page-numbers.next {
+	right: 0px;
+}
+
+.page-numbers.current { //現在いるページ
+	@include mq(md){
+		border: none;
+		background-color: #3C2B1C;
+		color: #FFF;
+	}
+}

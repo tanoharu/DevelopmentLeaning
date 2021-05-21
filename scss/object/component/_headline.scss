@@ -1,0 +1,53 @@
+/*headline
+-------------------------------------------*/
+.c-headline--lv1{
+	font-family: 'Roboto', sans-serif;
+	font-size: 2.5rem;
+	padding: 15px 10px;
+	color: #FFF;
+
+	&.l-archive-top__ttl {
+		@extend .c-headline--lv1;
+		font-size: 2.25rem;  //36px
+		line-height: 3rem;
+		padding: 0;
+		
+		@include mq(md) {
+			font-size: 60px;
+			line-height: 79px;
+		}
+	}
+}
+
+.c-headline--lv2 {
+	font-size: 28px;
+	line-height: 37px;
+	padding: 30px 0 32px 0;
+	color: #3C2A10;
+}
+
+.c-headline--lv3 {
+	font-size: 20px;
+	line-height: 30px;
+	padding-bottom: 1.5rem;
+	@include mq(md) {
+		padding-bottom: 2.0rem;
+	}
+	@include mq(lg) {
+		font-size: 36px;
+		padding-bottom: 4rem;
+	}
+}
+
+.c-headline--lv4 {
+	padding-bottom: 0.7rem;
+	@include mq(lg) {
+		font-size: 24px;
+	}
+}
+
+.c-headline--lv5 {
+	font-size: 16px;
+	line-height: 21px;
+	padding: 10px 0;
+}
